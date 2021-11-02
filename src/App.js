@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import "./App.scss";
 import Home from "./component/Home";
 import Msg from "./component/Msg";
@@ -40,9 +40,10 @@ function App() {
           <Route path="/" exact>
             <Home rooms={rooms} />
           </Route>
-          <Route path="/room/:id">
+          <Route path="/room/:id" exact>
             <Room />
           </Route>
+          <Redirect from="/*" to="/" />
         </Switch>
       </div>
     );
