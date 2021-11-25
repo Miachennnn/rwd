@@ -27,7 +27,7 @@ function App() {
           setIsLoaded(true);
           setError(error);
         }
-      );
+      ); // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   if (error) {
     return <Msg msg={error.message} />;
