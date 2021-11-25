@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Display:wght@200&display=swap");
+$desktop: 1200px;
+$tablet: 810px;
+$phone: 480px;
+.DateRangePicker {
+  user-select: none;
+  font-family: "Noto Sans Display", sans-serif;
+  background: #f7f7f7;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
+  min-height: 390px;
+  max-width: 390px;
+  @media screen and (min-width: $phone) {
+    width: 390px;
+  }
+  padding: 30px;
+  margin: auto;
+}
+.nav {
+  width: 100%;
+  display: flex;
+  .pre {
+    cursor: pointer;
+    flex: 1;
+  }
+  .next {
+    cursor: pointer;
+    flex: 1;
+    text-align: right;
+  }
+  .currentYM {
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1.88px;
+  }
+}
+.weeks {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  span {
+    color: #6d7278;
+    flex: 1;
+    text-align: center;
+  }
+}
+.days {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 20px 0;
+  .date {
+    font-weight: bold;
+    font-size: 14px;
+    color: #6d7278;
+    letter-spacing: 1.46px;
+    text-align: center;
+    padding: 5px;
+    // &:hover:not(.disable) {
+    //   background-color: #fff;
+    // }
+    &.disable {
+      cursor: not-allowed;
+      color: #c9ccd0 !important;
+    }
+    &.booked {
+      background-size: 536%;
+      background-position: 34% 84%;
+      background-image: url(../icon/stripe.svg);
+    }
+    &.selected {
+      background-color: #fff;
+    }
+  }
+}

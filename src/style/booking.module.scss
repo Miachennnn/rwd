@@ -1,0 +1,120 @@
+.cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bookingForm {
+  @media screen and (min-width: 480px) {
+    min-width: 400px;
+  }
+  font-family: "Noto Sans Display", sans-serif;
+  font-size: 14px;
+  color: #000000;
+  letter-spacing: 1.46px;
+  padding: 1.5rem 2.5rem;
+  background: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  .title {
+    font-size: 24px;
+    letter-spacing: 2.51px;
+  }
+  .inputs {
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 1rem;
+    div:nth-child(2n) {
+      input:not([type="date"]) {
+        width: 100%;
+      }
+      text-align: center;
+      justify-content: space-between;
+    }
+    div:nth-child(6) {
+      display: grid;
+      grid-template-columns: 1fr 0.5fr 1fr;
+      align-items: center;
+    }
+    input {
+      font-size: 10px;
+      color: #000000;
+      border-radius: 5px;
+      padding: 5px 10px;
+      font-weight: bold;
+    }
+  }
+  .type {
+    font-size: 12px;
+    color: #6d7278;
+    letter-spacing: 1.25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem 2.5rem;
+    margin: auto -2.5rem;
+    background: #ededed;
+    div:nth-child(2n) {
+      text-align: right;
+    }
+  }
+  .total {
+    font-size: 26px;
+    color: #ff5c5c;
+    letter-spacing: 2.72px;
+    text-align: right;
+    font-weight: bold;
+  }
+  input {
+    font-family: "Noto Sans Display", sans-serif;
+    border: 1px solid #c9c9c9;
+  }
+  .grid {
+    margin: 0.6rem;
+    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    div:nth-child(2n) {
+      text-align: right;
+    }
+    input {
+      cursor: pointer;
+      padding: 8px 24px;
+      border: none;
+      font-size: 14px;
+      letter-spacing: 1.46px;
+    }
+  }
+}
+.cancel {
+  input {
+    color: #6d7278;
+    background: #d8d8d8;
+  }
+}
+.submit {
+  img {
+    margin: 1rem auto;
+  }
+  text-align: center;
+  input:disabled {
+    background: rgba(72, 72, 72, 0.5);
+    cursor: not-allowed;
+  }
+  input {
+    cursor: pointer;
+    padding: 8px 24px;
+    border: none;
+    font-size: 14px;
+    letter-spacing: 1.46px;
+    background: #484848;
+    color: #fff;
+  }
+}
+.right {
+  float: right;
+}

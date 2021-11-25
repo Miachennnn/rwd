@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Display:wght@200&display=swap");
+$desktop: 1200px;
+$tablet: 768px;
+$phone: 480px;
+.slider {
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+  color: #fff;
+  width: 100vw;
+  height: 55vw;
+  display: flex;
+  // 高於1200px 限制高度
+  @media screen and (min-width: $desktop) {
+    height: 660px;
+  }
+  @media screen and (max-width: $phone) {
+    .logo img {
+      height: 30vw;
+    }
+  }
+}
+
+.about {
+  z-index: 1;
+  text-align: center;
+  margin: auto;
+}
+.info {
+  margin-top: 47px;
+  display: grid;
+  grid-template-columns: 1fr 2.4fr;
+  // 低於768 資訊box不顯示
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
+}
+.info-socail {
+  margin: auto;
+}
+.info-socail img:first-child {
+  margin-right: 11px;
+}
+.info-content {
+  padding-left: 2rem;
+  border-left: 1px solid #fff;
+  flex-direction: column;
+  display: flex;
+  font-family: "Noto Sans Display", sans-serif;
+  text-align: left;
+}
+.info-content {
+  img {
+    vertical-align: middle;
+  }
+}
+div.info-content-line {
+  line-height: 1.9rem;
+  span {
+    margin-left: 1.25rem;
+    user-select: all;
+  }
+}
+
+.rooms {
+  position: relative;
+  width: 95vw;
+  margin: -8vw auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  @media screen and (min-width: 1000px) {
+    width: 1000px;
+  }
+}
+.rooms-box {
+  @media screen and (max-width: $tablet) {
+    transition: 1s;
+  }
+  position: relative;
+  overflow: hidden;
+  background-position: 50% 100%;
+  background-size: cover;
+  height: 350px;
+  box-shadow: 2px 2px 9px 0 rgba(0, 0, 0, 0.18);
+  flex: 1 1 100%;
+  margin-bottom: 30px;
+  @media screen and (min-width: $tablet) {
+    margin: 0 15px 60px;
+    flex: 1 1 300px;
+  }
+  @media screen and (min-width: $desktop) {
+    flex: 0 1 300px;
+  }
+  .rooms_box-info {
+    transition: 1s;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    padding: 30px;
+    background: rgba(247, 247, 247, 0.9);
+    font-size: 14px;
+    color: #000000;
+    letter-spacing: 1.46px;
+    font-family: "Noto Sans Display", sans-serif;
+    .hover {
+      transition: 0.8s;
+    }
+    @media screen and (min-width: $desktop) {
+      background: rgba(247, 247, 247, 1);
+      bottom: -70px;
+      .hover {
+        opacity: 0;
+      }
+      &:hover {
+        cursor: pointer;
+        bottom: 0px;
+        .hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    .rooms_box_info-detail {
+      letter-spacing: 2.19px;
+      overflow: hidden;
+      font-size: 12px;
+      font-weight: lighter;
+      color: #6d7278;
+      div:last-child {
+        padding-top: 1rem;
+        display: flex;
+        align-items: baseline;
+      }
+      .large {
+        font-size: 21px;
+        color: #000000;
+      }
+      .right {
+        flex: 1;
+        text-align: right;
+      }
+    }
+  }
+}

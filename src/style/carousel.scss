@@ -1,0 +1,54 @@
+.carousel {
+  // animation: slider 50s infinite;
+  // animation: name duration timing-function delay iteration-count direction fill-mode;
+  position: absolute;
+  width: 600%;
+  height: 55vw;
+}
+.carousel-item {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 100%;
+  width: 100vw;
+  height: 100%;
+  float: left;
+}
+
+// @keyframes slider {
+//   0% {
+//     left: 0;
+//   }
+//   10% {
+//     left: -100%;
+//   }
+//   20% {
+//     left: -100%;
+//   }
+//   20% {
+//     left: -200%;
+//   }
+//   30% {
+//     left: -200%;
+//   }
+//   30% {
+//     left: -300%;
+//   }
+//   40% {
+//     left: -300%;
+//   }
+//   40% {
+//     left: -400%;
+//   }
+//   50% {
+//     left: -400%;
+//   }
+//   50% {
+//     left: -500%;
+//   }
+//   90% {
+//     left: -500%;
+//   }
+//   90% {
+//     left: 0;
+//   }
+// }

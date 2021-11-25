@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Display:wght@200&display=swap");
+$desktop: 1200px;
+$tablet: 810px;
+$phone: 480px;
+.slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background: #f7f7f7;
+  box-shadow: 2px 2px 9px 0 rgba(0, 0, 0, 0.18);
+  height: 50vw;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  .img {
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+  .img:nth-child(3) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+}
+.logo {
+  position: absolute;
+  left: 50px;
+  top: 32px;
+  img {
+    cursor: pointer;
+  }
+  @media screen and (max-width: $phone) {
+    img {
+      width: 30vw;
+    }
+  }
+}
+.content {
+  overflow: hidden;
+  font-weight: lighter;
+  font-family: "Noto Sans Display", sans-serif;
+  width: 90vw;
+  margin: 45px auto;
+  font-size: 12px;
+  color: #000000;
+  letter-spacing: 1.25px;
+  text-align: justify;
+  line-height: 20px;
+  @media screen and (min-width: $desktop) {
+    width: 1080px;
+    display: flex;
+  }
+  .left {
+    @media screen and (min-width: $desktop) {
+      margin-right: 35px;
+      flex: 1 1 470px;
+    }
+    .title {
+      line-height: 50px;
+      font-weight: 900;
+      font-size: 36px;
+      color: #000000;
+      margin-bottom: 1.5rem;
+      @media screen and (min-width: $phone) {
+        letter-spacing: 3.76px;
+      }
+    }
+    .p {
+      font-size: 14px;
+      color: #000000;
+      letter-spacing: 1.46px;
+      line-height: 31px;
+    }
+    .des {
+      margin-top: 1rem;
+      font-size: 12px;
+      color: #000000;
+      letter-spacing: 1.25px;
+      text-align: justify;
+      line-height: 20px;
+    }
+    .time {
+      margin: 3rem auto;
+      font-size: 21px;
+      letter-spacing: 2.19px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .smaller {
+        font-size: 14px;
+        color: #000000;
+        letter-spacing: 1.46px;
+      }
+    }
+    .facility {
+      padding: 20px 0 25px 25px;
+      display: grid;
+      gap: 25px;
+      grid-template-columns: 1fr 1fr;
+      background: #f0f0f0;
+      @media screen and (min-width: $tablet) {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .item {
+        img {
+          vertical-align: middle;
+        }
+        span {
+          margin-left: 1rem;
+          @media screen and (min-width: $desktop) {
+          }
+        }
+      }
+      .unsupported {
+        filter: opacity(30%);
+      }
+    }
+  }
+  .price {
+    font-size: 14px;
+    color: #6d7278;
+    letter-spacing: 1.46px;
+    line-height: 27px;
+    @media screen and(min-width: $desktop) {
+      flex: 1 0 130px;
+      margin-right: 35px;
+      text-align: right;
+    }
+    @media screen and(max-width: $tablet) {
+      text-align: center;
+      display: grid;
+      justify-content: space-evenly;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: baseline;
+      margin: 1rem auto;
+    }
+    .large {
+      font-size: 30px;
+      color: #000000;
+      letter-spacing: 3.13px;
+      line-height: 50px;
+    }
+    .subLarge {
+      font-size: 16px;
+      color: #000000;
+      letter-spacing: 1.67px;
+      line-height: 27px;
+    }
+  }
+  .right {
+    @media screen and (min-width: $desktop) {
+      flex: 0 0 390px;
+    }
+    @media screen and (max-width: $tablet) {
+      text-align: center;
+    }
+    .calender {
+      margin-bottom: 1.5rem;
+    }
+    .lock {
+      margin-right: 2rem;
+      position: relative;
+      display: inline-block;
+      .buttonBackground {
+        background-image: url(../icon/stripe.svg);
+        position: relative;
+        top: 5px;
+        left: 5px;
+        height: 55px;
+        width: 120px;
+        background-position: 50% 50%;
+        background-size: 250%;
+      }
+      button {
+        cursor: pointer;
+        font-weight: lighter;
+        height: 53px;
+        width: 118px;
+        border: none;
+        background: #575757;
+        font-size: 16px;
+        color: #ffffff;
+        letter-spacing: 1.67px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
